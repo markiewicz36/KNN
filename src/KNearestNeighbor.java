@@ -24,7 +24,7 @@ public class KNearestNeighbor {
         return xMax.subtract(xMax);
     }
 
-    private RealMatrix normalize() {
-        RealMatrix xMinRepeat = MatrixUtils.createRealMatrix();
-    }
+//    private RealMatrix normalize() {
+//        RealMatrix xMinRepeat = MatrixUtils.createRealMatrix();
+//    }
 }
