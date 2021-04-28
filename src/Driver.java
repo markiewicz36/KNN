@@ -1,3 +1,5 @@
+import org.apache.commons.math3.linear.MatrixUtils;
+
 import java.util.ArrayList;
 import java.util.TreeMap;
 
@@ -34,5 +36,10 @@ public class Driver {
                 xArray[i-1][j] = Double.parseDouble(TRAINING_DATA[i][0][j]);
             yArray.add(TRAINING_DATA[i][1][0]);
         }
+        handleCommandLine(new KNearestNeighbor(MatrixUtils.createRealMatrix(xArray), yArray));
+    }
+
+    static void handleCommandLine(KNearestNeighbor knn){
+
     }
 }
