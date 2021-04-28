@@ -24,7 +24,17 @@ public class KNearestNeighbor {
         return xMax.subtract(xMax);
     }
 
-//    private RealMatrix normalize() {
-//        RealMatrix xMinRepeat = MatrixUtils.createRealMatrix();
-//    }
+    private RealMatrix normalize() {
+        RealMatrix xMinRepeat = MatrixUtils.createRealMatrix(x.getData().length, x.getData()[0].length);
+        for (int i = 0 ; i < xMinRepeat.getData().length; i++)
+            for (int j = 0; j < xMinRepeat.getData()[0].length; j++)
+                xMinRepeat.setEntry(i, j, xMin.getData()[0][j]);
+
+        RealMatrix xRngRepeat = MatrixUtils.createRealMatrix(x.getData().length, x.getData()[0].length);
+        for (int i = 0 ; i < xMinRepeat.getData().length; i++)
+            for (int j = 0; j < xMinRepeat.getData()[0].length; j++)
+                xRngRepeat.setEntry(i, j, xMin.getData()[0][j]);
+
+            return MatrixHelper.div(x.subtract(xMinRepeat), xRngRepeat);
+    }
 }
