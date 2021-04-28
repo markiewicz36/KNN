@@ -2,7 +2,7 @@ import org.apache.commons.math3.linear.RealMatrix;
 import java.util.ArrayList;
 
 public class KNearestNeighbor {
-    RealMatrix x;
+    RealMatrix x, xMin, xMax, xRng, xNrm;
     ArrayList<String> y;
 
     public KNearestNeighbor(RealMatrix x, ArrayList<String> y) {
